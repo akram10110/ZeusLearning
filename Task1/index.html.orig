@@ -89,7 +89,11 @@
 
       <div class="text-div">
         <p class="text1">@moshhamedani</p>
+<<<<<<< HEAD
+        <p class="text2">I'd love to teach you HTML/CSS/PYTHON!</p>
+=======
         <p class="text2">I'd love to teach you HTML/CSS/PYTHON/JS!</p>
+>>>>>>> test_branch
 
         <div class="options-div">
           <div class="comments-div">
