@@ -8,12 +8,11 @@ margin: 0px;
 }
 
 .template1, .template2, .template3, .template4{
-    height: 246px;
+    height: 270px;
     width: auto;
     font-family: 'Quicksand';
     /* box-shadow: 5px 5px 5px black; */
-    padding: 24px 16px 9px 24px;
-    background-color: white;
+    padding: 0px 16px 9px 0px;    background-color: white;
 }
 
 .flex-column{
@@ -103,10 +102,20 @@ span{
 }
 
 
+.disabled{
+opacity: 0.4;
+}
 
+.display-none{
+    display: none;
+}
+
+.p-size{
+    width: 300px;
+}
 /* Header classes */
 .header{
-    background-image: url('pictures/header_pattern_image.png');
+    /* background-image: url('pictures/header_svg.svg'); */
     background-color: #000000;
     padding: 0px;
     margin: 0px;
@@ -114,6 +123,7 @@ span{
     align-items: center;
     height: 46px;
     /* border-bottom: 2px solid #31B9E4; */
+    padding-right: 20px;
 
  }
 
@@ -149,14 +159,20 @@ span{
  }
 
  .header-icon{
-    margin-right: 32px;
+    /* margin-right: 32px; */
     padding: 0px;
+ }
+
+ .header > a{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 20px;
  }
 
  .dp{
     border-radius: 50%;
     border: 1px solid #3FD28B;
-    margin-right: 24px;
+    /* margin-right: 24px; */
     height: 32px;
     width: 32px;
  }
@@ -188,6 +204,7 @@ span{
     align-items: center;
     width: 100%;
     border-bottom: 4px solid #000000;
+    cursor: pointer;
 }
 
 .courses > img {
@@ -212,6 +229,7 @@ span{
     justify-content: center;
     align-items: center;
     width: 100%;
+    cursor: pointer;
 
 }
 
@@ -295,7 +313,7 @@ align-items: end;}
     row-gap: 25px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .grid-container{
         display: flex;
         flex-direction: column;
@@ -303,10 +321,10 @@ align-items: end;}
         align-items: center;
     }
     .template1, .template2, .template3, .template4{
-        height: 246px;
+        height: 270px;
         width: 571px;
         font-family: 'Quicksand';
-        padding: 24px 16px 9px 24px;
+        padding: 0px 16px 9px 0px;
         background-color: white;
     }
 
@@ -319,7 +337,8 @@ align-items: end;}
     }
 
     .margin{
-        margin-left: auto;
+        /* margin-left: auto; */
+        margin-right: 30px;
     }
     
   }
@@ -377,12 +396,17 @@ align-items: end;}
  }
 
  .footer-link{
-    height: 34px;
+    height: 34px; 
     font-size: 14px;
     display: flex;
     align-items: center;
-    color: green;
     margin-bottom: 10px;
+ }
+
+ .footer-link > a{
+    text-decoration: none;
+    color: #007900;
+
  }
 
  .border{
@@ -402,3 +426,85 @@ align-items: end;}
     height:24px;
     width:90px
  }
+
+/* tag */
+ .template-margin{
+    margin-top: 24px;
+    margin-left: 24px;
+    width: 100px;
+}
+
+.tag{
+    position: absolute;
+    margin: 0px;
+    color: #581010;
+    background-color: rgb(241, 227, 227);
+    font-size: 10px;
+    
+}
+
+/* badge */
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #555; */
+    color: white;
+    text-decoration: none;
+    /* padding: 15px 26px; */
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+    margin-right: 20px;
+    
+  }
+
+  .notification-dp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #555; */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    /* padding: 15px 26px; */
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+    
+  }
+  
+  /* .notification:hover {
+    background: red;
+  } */
+  
+  .notification .badge {
+    margin-top: 2px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    background: rgb(0, 170, 255);
+    color: white;
+    /* height: 20px; */
+    width: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .notification .badge-dp {
+    margin-top: 2px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    /* height: 20px; */
+    width: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }

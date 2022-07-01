@@ -1,117 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+
     <title>WebSite</title>
     <link rel="stylesheet" href="index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div>
-
-    <div class="header-main">
-        <img src="pictures/header_logo.svg">
+      <div class="header-main">
+        <img src="pictures/header_logo.svg" alt="header logo" />
         <!-- <p>Quantum</p> -->
-    </div>
-
-    <div class="main-form">
-      <div class="heading-div">
-        <img class="back-image" src="pictures/back.svg" />
-        <p class="quantum-text">Log in with Quantum</p>
       </div>
 
-      <form>
-        <div class="radio-div">
-          <input
-            class="margin-radio"
-            type="radio"
-            id="html"
-            name="fav_language"
-            value="HTML"
+      <div class="main-form">
+        <div class="heading-div">
+          <img
+            class="back-image"
+            src="pictures/back.svg"
+            role="presentation"
+            tabindex="0"
+            alt="back icon"
           />
-          <label class="margin-radio-label" for="html">District</label><br />
-          <input
-            class="margin-radio"
-            type="radio"
-            id="css"
-            name="fav_language"
-            value="CSS"
-          />
-          <label class="margin-radio-label" for="css">Independent School</label
-          ><br />
+          <p class="quantum-text">Log in with Quantum</p>
         </div>
 
-        <div class="dropdown-state-div">
-          <label class="size-label">State*</label>
-          <select class="select-state font">
-            <option value="alabama">Alabama</option>
-            <option value="alabama">Alabama</option>
-            <option value="alabama">Alabama</option>
-            <option value="alabama">Alabama</option>
-          </select>
-        </div>
+        <form>
+          <div class="radio-div">
+            <input
+              class="margin-radio"
+              type="radio"
+              id="html"
+              name="fav_language"
+              value="HTML"
+            />
+            <label class="margin-radio-label" for="html">District</label><br />
+            <input
+              class="margin-radio"
+              type="radio"
+              id="css"
+              name="fav_language"
+              value="CSS"
+            />
+            <label class="margin-radio-label" for="css"
+              >Independent School</label
+            ><br />
+          </div>
 
-        <div class="dropdown-district-div">
-          <label class="size-label">District*</label>
-          <select class="select-state font">
-            <option value="alabama">Alabama School district</option>
-            <option value="alabama">Alabama School district</option>
-            <option value="alabama">Alabama School district</option>
-            <option value="alabama">Alabama School district</option>
-          </select>
-        </div>
+          <div class="dropdown-state-div">
+            <label class="size-label">State*</label>
+            <select class="select-state font" title="select state">
+              <option value="alabama">Alabama</option>
+              <option value="alabama">Alabama</option>
+              <option value="alabama">Alabama</option>
+              <option value="alabama">Alabama</option>
+            </select>
+          </div>
 
-        <div class="email-div">
-          <input class='font' type="email" placeholder="Username/Email ID*" />
-          <a href="#">FORGOT USERNAME?</a>
-        </div>
+          <div class="dropdown-district-div">
+            <label class="size-label">District*</label>
+            <select class="select-state font" title="select district">
+              <option value="alabama">Alabama School district</option>
+              <option value="alabama">Alabama School district</option>
+              <option value="alabama">Alabama School district</option>
+              <option value="alabama">Alabama School district</option>
+            </select>
+          </div>
 
-        <div class="abcd">
+          <div class="email-div">
+            <input class="font" type="email" placeholder="Username/Email ID*" />
+            <a href="#">FORGOT USERNAME?</a>
+          </div>
+
+          <div class="abcd">
             <div class="password-div flex">
-                <input class='font' type="PASSWORD" placeholder="Password*" />
-                <img class='p-img' src="pictures/preview.svg" >
+              <input class="font" type="password" placeholder="Password*" />
+              <img
+                class="p-img"
+                src="pictures/preview.svg"
+                role="presentation"
+                alt="preview icon"
+                tabindex="0"
+              />
             </div>
-            
+
             <a href="#">FORGOT PASSWORD?</a>
-        </div>
+          </div>
 
-        <div class="remember-div">
-          <input type="checkbox" />
-          <p>Remember Me</p>
-        </div>
+          <div class="remember-div">
+            <input type="checkbox" title="Remember me check box" />
+            <p>Remember Me</p>
+          </div>
 
-        <div class="btn-div">
+          <div class="btn-div">
             <button class="log-btn">LOG IN</button>
-        </div>
-      </form>
-    </div>
+          </div>
+        </form>
+      </div>
 
-    <div class="footer-main">
-        <div class="flex2">
-        <div class="footer-link">
-            <a>About</a>
-        </div>
-        <div class="border2"></div>
-        <div class="footer-link">
-            <a>Contact Us</a>
-        </div>
-    </div>
-        <div class="footer-copyright">
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="flex2">
+            <div class="footer-link">
+              <a href="#">About</a>
+            </div>
+            <div class="border2"></div>
+            <div class="footer-link">
+              <a href="#">Contact Us</a>
+            </div>
+          </div>
+          <div class="footer-copyright">
             <div class="flex">
-                <img class='footer-logo' src="pictures/footer_logo.svg">
+              <img
+                class="footer-logo"
+                src="pictures/footer_logo.svg"
+                alt="footer logo"
+              />
             </div>
             <div class="border"></div>
             <div class="flex">
-                <p>Copyright Ⓒ 2020-2021&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <p>Zeus Systems Pvt. Ltd.&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <p>All rights reserved.</p>
+              <p>Copyright Ⓒ 2020-2021&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <p>Zeus Systems Pvt. Ltd.&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <p>All rights reserved.</p>
             </div>
+          </div>
         </div>
+      </footer>
     </div>
-
-
-</div>
   </body>
 </html>

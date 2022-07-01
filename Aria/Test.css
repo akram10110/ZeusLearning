@@ -1,0 +1,66 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.progress-bar {
+    background-color: #fefefe;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    height: 30px;
+    width: 500px;
+    max-width: 100%;
+
+}
+
+.progress {
+    background: #ad5389;
+    background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);
+    background: linear-gradient(to bottom, #3c1053, #ad5389);
+    border-radius: 3px;
+    height: 30px;
+    width: 75%;
+    transition: width 0.5s ease-in;
+}
+
+.drop-down{
+    display: flex;
+    border: 1px solid black;
+    width: 500px;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text{
+    width: 512px;
+    background-color: aqua;
+    margin-top: 0px;
+}
+
+.text > p{
+    margin: 0px;
+}
+
+.expander{
+    background-image: url('../Task4/pictures/arrow-down.svg');
+}
+
+#btn{
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#p{
+    width: 500px;
+    background-color: #ad5389;
+    margin: 0px;
+    display: none;
+}
