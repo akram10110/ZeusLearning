@@ -3,7 +3,7 @@ body{
 opacity: 1;
 font-family: 'Quicksand';
 padding: 0px;
-margin: 0px;
+margin: 0px; 
 }
 
 .main-form{
@@ -47,10 +47,12 @@ border-radius: 2px 2px 0px 0px;
 }
 
 .radio-div{
-    margin-top: 34px;	accent-color: green;
+    margin-top: 34px;	accent-color: green;     
 }
 
+
 .margin-radio{
+    
     margin-right: 8px;
     /* height: 50px; */
     -webkit-transform: scale(1.5);
@@ -203,15 +205,25 @@ text-decoration: none;
 
  }
 
+ .header-bg-img{
+     width: 100%;
+     height: 46px;
+     position: absolute;
+     opacity: 0.4;
+     /* mix-blend-mode: overlay; */
+     background: transparent;
+ }
 
 
- .header-main > img{
+
+ .header-logo-img{
     margin-left: 29px;
     height: 36px;
     width: 134px;
     margin-right: 15px;
-    margin-top: 12px;
+    margin-top: 2px;
     margin-bottom: 12px;
+    position: absolute;
 
  }
 
