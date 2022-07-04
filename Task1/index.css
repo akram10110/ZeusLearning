@@ -1,0 +1,75 @@
+.main {
+  margin: auto;
+  margin-top: 50px;
+  height: 138px;
+  width: 457px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px;
+}
+
+.main .img-div {
+  height: 130px;
+  width: 130px;
+}
+
+.main .img-div .img1 {
+  height: 130px;
+  width: 130px;
+}
+
+.main .text-div {
+  height: auto;
+  width: auto;
+  margin-left: 14px;
+}
+
+.main .text-div .text1 {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  font-family: "roboto";
+  color: #000000;
+}
+
+.main .text-div .text2 {
+  font-weight: 400;
+  margin-top: 14px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  font-family: "roboto";
+  color: #000000;
+}
+
+.main .text-div .options-div {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .text-div .options-div .comments-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 24px;
+}
+
+.main .text-div .options-div .comments-div .size {
+  height: 20px;
+  width: 20px;
+  color: #858991;
+}
+
+.main .text-div .options-div .comments-div .number {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  margin-left: 14px;
+  font-weight: 500;
+  font-family: "roboto";
+  color: #858991;
+}
+/*# sourceMappingURL=index.css.map */
