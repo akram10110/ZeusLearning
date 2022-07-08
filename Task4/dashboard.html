@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Quantum Dashboard</title> 
+    <title>Quantum Dashboard</title>
     <link rel="stylesheet" href="dashboard.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,8 +14,16 @@
   <body>
     <div class="main-div">
       <header class="header">
-        <img class="header-bg-img" src='pictures/header_pattern_image.png' alt="header background image">
-        <img class="header-logo-img" src="pictures/header_logo.svg" alt="header logo" />
+        <img
+          class="header-bg-img"
+          src="pictures/header_pattern_image.png"
+          alt="header background image"
+        />
+        <img
+          class="header-logo-img"
+          src="pictures/header_logo.svg"
+          alt="header logo"
+        />
         <ul>
           <li><a href="#">DASHBOARD</a></li>
           <li><a href="#">CONTENT</a></li>
@@ -24,79 +32,55 @@
           <li><a href="#">ADMIN</a></li>
         </ul>
         <div class="icons-menu">
-        <a href="#" class="notification">
+          <a href="#" class="notification">
+            <img
+              role="button"
+              class="header-icon margin"
+              src="pictures/alerts.svg"
+              alt="notification icon"
+            />
+            <span class="badge">3</span>
+          </a>
+
+          <a href="#" class="notification">
+            <img
+              role="button"
+              class="header-icon margin"
+              src="pictures/announcements.svg"
+              alt="notification icon"
+            />
+            <span class="badge">3</span>
+          </a>
+
+          <a href="#" class="notification margin">
+            <img
+              role="button"
+              class="dp margin"
+              src="pictures/imageMask-1.svg"
+              alt="notification icon"
+            />
+            <span class="badge-dp">T</span>
+          </a>
+
           <img
-          role="button"
-          class="header-icon margin"
-          src="pictures/alerts.svg"
-          alt="notification icon"
-        />          
-        <span class="badge">3</span>
-        </a>
-
-        <a href="#" class="notification">
-          <img
-          role="button"
-          class="header-icon margin"
-          src="pictures/announcements.svg"
-          alt="notification icon"
-        />          
-        <span class="badge">3</span>
-        </a>
-
-        <a href="#" class="notification margin">
-          <img
-          role="button"
-          class="dp margin"
-          src="pictures/imageMask-1.svg"
-          alt="notification icon"
-        />          
-        <span class="badge-dp">T</span>
-        </a>
-
-
-       
-        <!-- <img
-          role="button"
-          tabindex="0"
-          class="header-icon margin"
-          src="pictures/alerts.svg"
-          alt="notification icon"
-        />
-        -->
-        <!-- <img
-          role="button"
-          tabindex="0"
-          class="header-icon"
-          src="pictures/announcements.svg"
-          alt="announcements icon"
-        /> -->
-        <!-- <img
-          role="button"
-          tabindex="0"
-          class="dp"
-          src="pictures/imageMask-1.svg"
-          alt="profile picture icon"
-        /> -->
-        <img
-          role="button"
-          tabindex="0"
-          class="menu-icon"
-          src="pictures/hamburger-menu.svg"
-          alt="Menu icon"
-        />
-      </div>
+            role="button"
+            tabindex="0"
+            class="menu-icon"
+            src="pictures/hamburger-menu.svg"
+            alt="Menu icon"
+          />
+        </div>
       </header>
 
       <div class="dashboard-main">
         <div class="dashboard-navigation">
-          <div class="courses"  tabindex="0">
-            <img src="pictures/courses.svg" alt="Courses logo"/>
+          <div class="courses" tabindex="0">
+            <img src="pictures/courses.svg" alt="Courses logo" />
             <p id="courses_num">4</p>
             <p>Courses</p>
           </div>
-          <div class="classes"  tabindex="0">
-            <img src="pictures/classes.svg" alt="classes logo"/>
+          <div class="classes" tabindex="0">
+            <img src="pictures/classes.svg" alt="classes logo" />
             <p id="classes_num">4</p>
             <p>Classes</p>
           </div>
@@ -109,17 +93,56 @@
           <div class="sub2">
             <p>Sort By:</p>
             <select title="sort by select list">
-              <option >Course name</option>
+              <option>Course name</option>
               <option>Course name</option>
               <option>Course name</option>
               <option>Course name</option>
             </select>
-            <img src="pictures/sort.svg" alt="sort icon" role="button" tabindex="0" />
+            <img
+              src="pictures/sort.svg"
+              alt="sort icon"
+              role="button"
+              tabindex="0"
+            />
           </div>
         </div>
 
-        <div class="grid-container">
-          <div class="template1">
+        <div class="grid-container" id="grid-container"></div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="flex2">
+            <div class="footer-link">
+              <a href="#">About</a>
+            </div>
+            <div class="border2"></div>
+            <div class="footer-link">
+              <a href="#">Contact Us</a>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="flex">
+              <img
+                class="footer-logo"
+                src="pictures/footer_logo.svg"
+                alt="footer logo"
+              />
+            </div>
+            <div class="border"></div>
+            <div class="flex">
+              <p>Copyright Ⓒ 2020-2021&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <p>Zeus Systems Pvt. Ltd.&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <p>All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="./dashboard2.js"></script>
+</html>
+<!-- <div class="template1">
             <div class="flex-row">
               <div class="flex-row template-margin">
                 <img class="img" src="pictures/imageMask-1.svg" alt="course image"/>
@@ -364,34 +387,4 @@
               <img src="pictures/grade submissions.svg" tabindex="0" alt="grade submission icon"/>
               <img src="pictures/reports.svg" tabindex="0" alt="report icon"/>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <div class="footer-main">
-          <div class="flex2">
-            <div class="footer-link">
-              <a href="#">About</a>
-            </div>
-            <div class="border2"></div>
-            <div class="footer-link">
-              <a href="#">Contact Us</a>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="flex">
-              <img class="footer-logo" src="pictures/footer_logo.svg" alt="footer logo"/>
-            </div>
-            <div class="border"></div>
-            <div class="flex">
-              <p>Copyright Ⓒ 2020-2021&nbsp;&nbsp;&nbsp;&nbsp;</p>
-              <p>Zeus Systems Pvt. Ltd.&nbsp;&nbsp;&nbsp;&nbsp;</p>
-              <p>All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
-</html>
+          </div> -->
