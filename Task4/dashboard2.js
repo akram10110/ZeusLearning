@@ -133,7 +133,7 @@ function setData() {
 setData();
 
 // *************************************************************ham-hover
-const menu_icon = document.getElementById('dropdown-menu');
+const menu_icon = document.getElementById('ham-menu-icon');
 
 const menu_dropdown = document.getElementById('ham-menu-div');
 

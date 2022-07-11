@@ -181,6 +181,13 @@ span {
 .header-icon {
      /* margin-right: 32px; */
      padding: 0px;
+     
+}
+
+.ham-menu-icon{
+    padding: 0px;
+    height: 30px;
+    width: 50px;
 }
 
 #notification-icon {
@@ -361,7 +368,7 @@ span {
           background-color: white;
      }
 
-     .menu-icon {
+     #ham-menu-icon{
           display: block;
      }
 
@@ -385,17 +392,11 @@ span {
      .dashboard-main {
           width: 635px;
      }
-
-     /* worry about that */
-     /* .header{
-        width: 1000px;
-    } */
 }
 
-/* footer */
 
+/* footer */
 .footer {
-     /* margin-top: 20%; */
      background-color: #eeeeee;
 }
 
@@ -775,7 +776,7 @@ a {
      /* text-align: right; */
      position: absolute;
      top: 2.5rem;
-     right: 200px;
+     right: 160px;
      top: 48px;
      z-index: 1;
      /* display: none; */
@@ -926,7 +927,7 @@ a {
      // justify-content: space-between;
      position: absolute;
      top: 2.5rem;
-     right: 260px;
+     right: 220px;
      top: 48px;
      //  display: none;
      /* opacity: 0; */
@@ -1102,4 +1103,15 @@ a {
           display: flex;
           align-items: center;
      }
+}
+
+.ham-icon{
+    display: none;
+}
+
+#ham-menu-icon{
+    // display: none;
+    margin: 50px 0px 26px 0px;
+    // margin-bottom: 26px;
+    padding: 0px;
 }

@@ -210,6 +210,12 @@ span {
   padding: 0px;
 }
 
+.ham-menu-icon {
+  padding: 0px;
+  height: 30px;
+  width: 50px;
+}
+
 #notification-icon {
   margin-top: 20px;
 }
@@ -429,7 +435,7 @@ span {
     padding: 0px 16px 9px 0px;
     background-color: white;
   }
-  .menu-icon {
+  #ham-menu-icon {
     display: block;
   }
   .header > ul {
@@ -454,15 +460,10 @@ span {
   .dashboard-main {
     width: 635px;
   }
-  /* worry about that */
-  /* .header{
-        width: 1000px;
-    } */
 }
 
 /* footer */
 .footer {
-  /* margin-top: 20%; */
   background-color: #eeeeee;
 }
 
@@ -893,7 +894,7 @@ a {
   /* text-align: right; */
   position: absolute;
   top: 2.5rem;
-  right: 200px;
+  right: 160px;
   top: 48px;
   z-index: 1;
   /* display: none; */
@@ -1060,7 +1061,7 @@ a {
   /* text-align: right; */
   position: absolute;
   top: 2.5rem;
-  right: 260px;
+  right: 220px;
   top: 48px;
   /* opacity: 0; */
   -webkit-transition: opacity 0.5s ease;
@@ -1272,5 +1273,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.ham-icon {
+  display: none;
+}
+
+#ham-menu-icon {
+  margin: 50px 0px 26px 0px;
+  padding: 0px;
 }
 /*# sourceMappingURL=dashboard.css.map */
