@@ -454,6 +454,9 @@ span {
             align-items: center;
     margin-left: auto;
   }
+  .announcment-div, .notifications-div {
+    margin-right: 50px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -894,7 +897,7 @@ a {
   /* text-align: right; */
   position: absolute;
   top: 2.5rem;
-  right: 160px;
+  right: 105px;
   top: 48px;
   z-index: 1;
   /* display: none; */
@@ -1061,7 +1064,7 @@ a {
   /* text-align: right; */
   position: absolute;
   top: 2.5rem;
-  right: 220px;
+  right: 170px;
   top: 48px;
   /* opacity: 0; */
   -webkit-transition: opacity 0.5s ease;
