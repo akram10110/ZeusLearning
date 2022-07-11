@@ -288,6 +288,7 @@
                 <hr>
                 <button>CREATE NEW</button>
               </div>
+
             </div>
          
 
@@ -296,7 +297,7 @@
               role="button"
               class="dp margin"
               src="pictures/imageMask-1.svg"
-              alt="notification icon"
+              alt="profile picture"
             />
             <span class="badge-dp">T</span>
           </a>
@@ -325,26 +326,73 @@
           </div>
 
 
-        <ul class="nav-items">
         <!-- Dropdown menu -->
-        <li class="nav-item nav-item-dropdown">
-          <!-- <a class="dropdown-trigger" href="#">Settings</a> -->
+        <a  id="dropdown-menu" href="#" class="notification">
           <img
-          role="button"
-          tabindex="0"
-          class="menu-icon"
-          src="pictures/hamburger-menu.svg"
-          alt="Menu icon"
-          id="menu-icon"
-        />
-          <ul class="dropdown-menu">
+            role="button"
+            class="header-icon margin"
+            src="pictures/hamburger-menu.svg"
+            alt="notification icon"
+          />
+        </a>
+
+          <div id="ham-menu-div" class="ham-menu">
+
+            <div class="option-div">
+              <p>DASHBOARD</p>
+            </div>
+
+            <div>
+              <div class="option-div">
+                <p>CONTENT</p>
+                <p class="dropdown-icon">›</p>
+              </div>
+
+              <div class="sub-options">
+                <p>COURSE CATALOG</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="option-div">
+                <p>USERS</p>
+                <p class="dropdown-icon">›</p>
+              </div>
+
+              <div class="sub-options">
+                <p>COURSE CATALOG</p>
+              </div>
+              <div class="sub-options">
+                <p>COURSE CATALOG</p>
+              </div>
+              <div class="sub-options">
+                <p>COURSE CATALOG</p>
+              </div>
+            </div>
+
+            <div>
+            <div class="option-div">
+              <p>REPORTS</p>
+              <p class="dropdown-icon">›</p>
+            </div>
+            </div>
+
+            <div>
+            <div class="option-div">
+              <p>ADMIN</p>
+              <p class="dropdown-icon">›</p>
+            </div>
+            </div>
+
+          </div>
+        
+          <!-- <ul class="dropdown-menu">
             <li class="dropdown-menu-item">
               <a href="#">DASHBOARD</a>
             </li>
            
             <ul class="dropdown-menu-item sub-option">
               <a  class="dropdown-trigger" href="#">CONTENT&nbsp;</a>
-              <!-- <a >&nbsp;</a> -->
               <li class="dropdown-menu-item sub">
                 <a href="#">COURSE CATALOG</a>
               </li>
@@ -377,12 +425,8 @@
               </li>
             </ul>
 
-            <!-- <li class="dropdown-menu-item">
-              <a href="#">Dropdown Item 3</a>
-            </li> -->
-          </ul>
-        </li>
-      </ul>
+          
+          </ul> -->
         </div>
       </header>
 

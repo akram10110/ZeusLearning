@@ -132,83 +132,68 @@ function setData() {
 
 setData();
 
+// *************************************************************ham-hover
+const menu_icon = document.getElementById('dropdown-menu');
+
+const menu_dropdown = document.getElementById('ham-menu-div');
+
+menu_icon.addEventListener('mouseover', function handleMouseOver() {
+  menu_dropdown.style.display = 'block';
+});
+
+menu_icon.addEventListener('mouseout', function handleMouseOut() {
+  menu_dropdown.style.display = 'none';
+});
+
+menu_dropdown.addEventListener('mouseover', function handleMouseOver() {
+  menu_dropdown.style.display = 'block';
+});
+
+menu_dropdown.addEventListener('mouseout', function handleMouseOut() {
+  menu_dropdown.style.display = 'none';
+});
+
 
 // *************************************************************notifications-hover
 const el = document.getElementById('notifications-icon');
 
 const hiddenDiv = document.getElementById('notifications-div');
 
-// ✅ Show hidden DIV on hover
 el.addEventListener('mouseover', function handleMouseOver() {
   hiddenDiv.style.display = 'block';
-
-  // 👇️ if you used visibility property to hide div
-  // hiddenDiv.style.visibility = 'visible';
 });
 
-
-
-// ✅ (optionally) Hide DIV on mouse out
 el.addEventListener('mouseout', function handleMouseOut() {
   hiddenDiv.style.display = 'none';
-
-  // 👇️ if you used visibility property to hide div
-  // hiddenDiv.style.visibility = 'hidden';
 });
 
 hiddenDiv.addEventListener('mouseover', function handleMouseOver() {
   hiddenDiv.style.display = 'block';
-
-  // 👇️ if you used visibility property to hide div
-  // hiddenDiv.style.visibility = 'visible';
 });
 
 hiddenDiv.addEventListener('mouseout', function handleMouseOut() {
   hiddenDiv.style.display = 'none';
-
-  // 👇️ if you used visibility property to hide div
-  // hiddenDiv.style.visibility = 'visible';
 });
 
 
-
-
 // *************************************************announcement-hover
-
-
 const el2 = document.getElementById('announcement-icon');
 
 const hiddenDiv2 = document.getElementById('announcment-div');
 
-// ✅ Show hidden DIV on hover
 el2.addEventListener('mouseover', function handleMouseOver() {
   hiddenDiv2.style.display = 'block';
-
-  // 👇️ if you used visibility property to hide div
-  // hiddenDiv.style.visibility = 'visible';
 });
 
-
-
-// ✅ (optionally) Hide DIV on mouse out
 el2.addEventListener('mouseout', function handleMouseOut() {
   hiddenDiv2.style.display = 'none';
-
-  // 👇️ if you used visibility property to hide div
-  // hiddenDiv.style.visibility = 'hidden';
 });
 
 hiddenDiv2.addEventListener('mouseover', function handleMouseOver() {
   hiddenDiv2.style.display = 'block';
-
-  // 👇️ if you used visibility property to hide div
-  // hiddenDiv.style.visibility = 'visible';
 });
 
 hiddenDiv2.addEventListener('mouseout', function handleMouseOut() {
   hiddenDiv2.style.display = 'none';
-
-  // 👇️ if you used visibility property to hide div
-  // hiddenDiv.style.visibility = 'visible';
 });
 
