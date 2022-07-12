@@ -11,49 +11,57 @@ var template_data = [
         "class": "Mr. Frank's class B",
         students: 50,
         start_date: "21-Jan-2020",
-        end_date: "21-Aug-2020"
+        end_date: "21-Aug-2020",
+        btn2: true,
+        btn3: true
     },
     {
         img: "pictures/imageMask-1.png",
-        topic: "Acceleration",
-        subject: "Physics",
-        grade: "Grade 7",
-        grade_update: "+2",
-        units: 4,
-        lessons: 18,
-        topics: 24,
-        "class": "Mr. Frank's class B",
-        students: 50,
-        start_date: "21-Jan-2020",
-        end_date: "21-Aug-2020"
+        topic: "Displacement, Velocity and Speed",
+        subject: "Physics 2",
+        grade: "Grade 6",
+        grade_update: "+3",
+        units: 2,
+        lessons: 15,
+        topics: 20,
+        "class": "No classes",
+        students: 0,
+        start_date: "",
+        end_date: "",
+        btn2: false,
+        btn3: false
     },
     {
         img: "pictures/imageMask-3.png",
-        topic: "Acceleration",
-        subject: "Physics",
-        grade: "Grade 7",
-        grade_update: "+2",
-        units: 4,
-        lessons: 18,
-        topics: 24,
+        topic: "Introduction to Biology: Micro organisms and how they affect.",
+        subject: "Biology",
+        grade: "Grade 4",
+        grade_update: "+1",
+        units: 5,
+        lessons: 16,
+        topics: 22,
         "class": "Mr. Frank's class B",
-        students: 50,
-        start_date: "21-Jan-2020",
-        end_date: "21-Aug-2020"
+        students: 300,
+        start_date: "",
+        end_date: "",
+        btn2: false,
+        btn3: false
     },
     {
         img: "pictures/imageMask-2.png",
-        topic: "Acceleration",
-        subject: "Physics",
-        grade: "Grade 7",
-        grade_update: "+2",
-        units: 4,
-        lessons: 18,
-        topics: 24,
+        topic: "Introduction to High School Mathematics",
+        subject: "Mathematics",
+        grade: "Grade 8",
+        grade_update: "+3",
+        units: 0,
+        lessons: 0,
+        topics: 0,
         "class": "Mr. Frank's class B",
-        students: 50,
-        start_date: "21-Jan-2020",
-        end_date: "21-Aug-2020"
+        students: 44,
+        start_date: "14-Oct-2019",
+        end_date: "20-Oct-2020",
+        btn2: true,
+        btn3: true
     },
 ];
 var notification_data = [
@@ -138,7 +146,31 @@ var announcement_data = [
 ];
 function setTemplateData() {
     for (var i = template_data.length - 1; i >= 0; i--) {
-        var template = "<div class=\"template1\">\n    <div class=\"flex-row\">\n    <div class=\"flex-row template-margin\">\n          <img class=\"img\" src=".concat(template_data[i].img, " alt=\"course image\"/>\n        </div>\n        <div style=\"width: 100%; margin-left: 50px; margin-top: 20px\">\n          <div class=\"flex-row\">\n            <p class=\"font-16 p-size\">Acceleration</p>\n            <img class=\"favourite\" src=\"pictures/favourite.svg\"  alt=\"favourite icon\" tabindex=\"0\"/>\n          </div>\n    \n          <div class=\"flex-row font-12 row2\">\n            <p>Physics</p>\n            <hr id=\"small_separator\" />\n            <p>Grade 7&nbsp;</p>\n            <p style=\"color: green\">+2</p>\n          </div>\n    \n          <div class=\"flex-row font-12 units\">\n            <p><span>4</span>&nbsp;Units&nbsp;&nbsp;</p>\n            <p><span>18</span>&nbsp;Lessons&nbsp;&nbsp;</p>\n            <p><span>24</span>&nbsp;Topics&nbsp;&nbsp;</p>\n          </div>\n    \n          <div class=\"select-div\">\n            <select class=\"font-16\" title=\"select a class\">\n              <option value=\"class\">Mr. Frank's class B</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n            </select>\n          </div>\n    \n          <div class=\"flex-row font-12 dates\">\n            <p>50 Students</p>\n            <hr id=\"small_separator\" />\n            <p>21-Jan-2020</p>\n            <p>&nbsp;-&nbsp;</p>\n            <p>21-Aug-2020</p>\n          </div>\n        </div>\n      </div>\n\n      <hr\n      class=\"big-separator\"\n      />\n    \n      <div class=\"template-end-symbols\">\n        <img src=\"pictures/preview.svg\" tabindex=\"0\" alt=\"eye icon\"/>\n        <img src=\"pictures/manage course.svg\" tabindex=\"0\" alt=\"manage courses icon\"/>\n        <img src=\"pictures/grade submissions.svg\" tabindex=\"0\" alt=\"grade submission icon\"/>\n        <img src=\"pictures/reports.svg\" tabindex=\"0\" alt=\"report icon\"/>\n      </div>\n    </div>");
+        var style_date = "";
+        var style_students = "";
+        var style_lessons = "";
+        var btn2 = "";
+        var btn3 = "";
+        var btn2_tab = 0;
+        var btn3_tab = 0;
+        if (template_data[i].start_date === "") {
+            style_date = "display: none;";
+        }
+        if (template_data[i].students === 0) {
+            style_students = "display: none;";
+        }
+        if (template_data[i].units === 0) {
+            style_lessons = "display: none;";
+        }
+        if (template_data[i].btn2 === false) {
+            btn2 = "opacity: 0.4;";
+            btn2_tab = -1;
+        }
+        if (template_data[i].btn3 === false) {
+            btn3 = "opacity: 0.4;";
+            btn3_tab = -1;
+        }
+        var template = "<div class=\"template1\">\n    <div class=\"flex-row\">\n    <div class=\"flex-row template-margin\">\n          <img class=\"img\" src=".concat(template_data[i].img, " alt=\"course image\"/>\n        </div>\n        <div style=\"width: 100%; margin-left: 50px; margin-top: 20px\">\n          <div class=\"flex-row\">\n            <p class=\"font-16 p-size\">").concat(template_data[i].topic, "</p>\n            <img class=\"favourite\" src=\"pictures/favourite.svg\"  alt=\"favourite icon\" tabindex=\"0\"/>\n          </div>\n    \n          <div class=\"flex-row font-12 row2\">\n            <p>").concat(template_data[i].subject, "</p>\n            <hr id=\"small_separator\" />\n            <p>").concat(template_data[i].grade, "&nbsp;</p>\n            <p style=\"color: green\">").concat(template_data[i].grade_update, "</p>\n          </div>\n    \n          <div style=\"").concat(style_lessons, "\" class=\"flex-row font-12 units\">\n            <p><span>").concat(template_data[i].units, "</span>&nbsp;Units&nbsp;&nbsp;</p>\n            <p><span>").concat(template_data[i].lessons, "</span>&nbsp;Lessons&nbsp;&nbsp;</p>\n            <p><span>").concat(template_data[i].topics, "</span>&nbsp;Topics&nbsp;&nbsp;</p>\n          </div>\n    \n          <div class=\"select-div\">\n            <select class=\"font-16\" title=\"select a class\">\n              <option value=\"class\">").concat(template_data[i]["class"], "</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n            </select>\n          </div>\n    \n          <div class=\"flex-row font-12 dates\">\n            <p style=\"").concat(style_students, "\">").concat(template_data[i].students, " Students</p>\n            <hr style=\"").concat(style_date, "\" id=\"small_separator\" />\n            <p style=\"").concat(style_date, "\">").concat(template_data[i].start_date, "</p>\n            <p style=\"").concat(style_date, "\">&nbsp;-&nbsp;</p>\n            <p style=\"").concat(style_date, "\">").concat(template_data[i].end_date, "</p>\n          </div>\n        </div>\n      </div>\n\n      <hr\n      class=\"big-separator\"\n      />\n    \n      <div class=\"template-end-symbols\">\n        <img src=\"pictures/preview.svg\" tabindex=\"0\" alt=\"eye icon\"/>\n        <img style=\"").concat(btn2, "\"src=\"pictures/manage course.svg\" tabindex=\"").concat(btn2_tab, "\" alt=\"manage courses icon\"/>\n        <img style=\"").concat(btn3, "\"src=\"pictures/grade submissions.svg\" tabindex=\"").concat(btn3_tab, "\" alt=\"grade submission icon\"/>\n        <img src=\"pictures/reports.svg\" tabindex=\"0\" alt=\"report icon\"/>\n      </div>\n    </div>");
         var a = document.getElementById("grid-container");
         if (a !== null) {
             a.insertAdjacentHTML("afterbegin", template);

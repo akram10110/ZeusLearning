@@ -12,48 +12,56 @@ const template_data = [
           students: 50,
           start_date: "21-Jan-2020",
           end_date: "21-Aug-2020",
+          btn2:true,
+          btn3:true,
      },
      {
           img: "pictures/imageMask-1.png",
-          topic: "Acceleration",
-          subject: "Physics",
-          grade: "Grade 7",
-          grade_update: "+2",
-          units: 4,
-          lessons: 18,
-          topics: 24,
-          class: "Mr. Frank's class B",
-          students: 50,
-          start_date: "21-Jan-2020",
-          end_date: "21-Aug-2020",
+          topic: "Displacement, Velocity and Speed",
+          subject: "Physics 2",
+          grade: "Grade 6",
+          grade_update: "+3",
+          units: 2,
+          lessons: 15,
+          topics: 20,
+          class: "No classes",
+          students: 0,
+          start_date: "",
+          end_date: "",
+          btn2:false,
+          btn3:false,
      },
      {
           img: "pictures/imageMask-3.png",
-          topic: "Acceleration",
-          subject: "Physics",
-          grade: "Grade 7",
-          grade_update: "+2",
-          units: 4,
-          lessons: 18,
-          topics: 24,
+          topic: "Introduction to Biology: Micro organisms and how they affect.",
+          subject: "Biology",
+          grade: "Grade 4",
+          grade_update: "+1",
+          units: 5,
+          lessons: 16,
+          topics: 22,
           class: "Mr. Frank's class B",
-          students: 50,
-          start_date: "21-Jan-2020",
-          end_date: "21-Aug-2020",
+          students: 300,
+          start_date: "",
+          end_date: "",
+          btn2:false,
+          btn3:false,
      },
      {
           img: "pictures/imageMask-2.png",
-          topic: "Acceleration",
-          subject: "Physics",
-          grade: "Grade 7",
-          grade_update: "+2",
-          units: 4,
-          lessons: 18,
-          topics: 24,
+          topic: "Introduction to High School Mathematics",
+          subject: "Mathematics",
+          grade: "Grade 8",
+          grade_update: "+3",
+          units: 0,
+          lessons: 0,
+          topics: 0,
           class: "Mr. Frank's class B",
-          students: 50,
-          start_date: "21-Jan-2020",
-          end_date: "21-Aug-2020",
+          students: 44,
+          start_date: "14-Oct-2019",
+          end_date: "20-Oct-2020",
+          btn2:true,
+          btn3:true,
      },
 ];
 
@@ -141,44 +149,71 @@ const announcement_data =[
 
 function setTemplateData() {
      for (let i = template_data.length - 1; i >= 0; i--) {
-          const template = `<div class="template1">
+
+      let style_date = "";
+      let style_students = ""
+      let style_lessons = ""
+      let btn2 = ""
+      let btn3 = ""
+      let btn2_tab = 0
+      let btn3_tab = 0
+      if(template_data[i].start_date === ""){
+        style_date="display: none;"
+      }
+      if(template_data[i].students === 0){
+        style_students ="display: none;"
+      }
+      if(template_data[i].units === 0){
+        style_lessons ="display: none;"
+      }
+
+      if(template_data[i].btn2 === false){
+        btn2 ="opacity: 0.4;"
+        btn2_tab = -1
+      }
+      if(template_data[i].btn3 === false){
+        btn3 ="opacity: 0.4;"
+        btn3_tab = -1
+      }
+    
+    const template = `<div class="template1">
     <div class="flex-row">
     <div class="flex-row template-margin">
           <img class="img" src=${template_data[i].img} alt="course image"/>
         </div>
         <div style="width: 100%; margin-left: 50px; margin-top: 20px">
           <div class="flex-row">
-            <p class="font-16 p-size">Acceleration</p>
+            <p class="font-16 p-size">${template_data[i].topic}</p>
             <img class="favourite" src="pictures/favourite.svg"  alt="favourite icon" tabindex="0"/>
           </div>
     
           <div class="flex-row font-12 row2">
-            <p>Physics</p>
+            <p>${template_data[i].subject}</p>
             <hr id="small_separator" />
-            <p>Grade 7&nbsp;</p>
-            <p style="color: green">+2</p>
+            <p>${template_data[i].grade}&nbsp;</p>
+            <p style="color: green">${template_data[i].grade_update}</p>
           </div>
     
-          <div class="flex-row font-12 units">
-            <p><span>4</span>&nbsp;Units&nbsp;&nbsp;</p>
-            <p><span>18</span>&nbsp;Lessons&nbsp;&nbsp;</p>
-            <p><span>24</span>&nbsp;Topics&nbsp;&nbsp;</p>
+          <div style="${style_lessons}" class="flex-row font-12 units">
+            <p><span>${template_data[i].units}</span>&nbsp;Units&nbsp;&nbsp;</p>
+            <p><span>${template_data[i].lessons}</span>&nbsp;Lessons&nbsp;&nbsp;</p>
+            <p><span>${template_data[i].topics}</span>&nbsp;Topics&nbsp;&nbsp;</p>
           </div>
     
           <div class="select-div">
             <select class="font-16" title="select a class">
-              <option value="class">Mr. Frank's class B</option>
+              <option value="class">${template_data[i].class}</option>
               <option value="class">Mr. Frank's class B</option>
               <option value="class">Mr. Frank's class B</option>
             </select>
           </div>
     
           <div class="flex-row font-12 dates">
-            <p>50 Students</p>
-            <hr id="small_separator" />
-            <p>21-Jan-2020</p>
-            <p>&nbsp;-&nbsp;</p>
-            <p>21-Aug-2020</p>
+            <p style="${style_students}">${template_data[i].students} Students</p>
+            <hr style="${style_date}" id="small_separator" />
+            <p style="${style_date}">${template_data[i].start_date}</p>
+            <p style="${style_date}">&nbsp;-&nbsp;</p>
+            <p style="${style_date}">${template_data[i].end_date}</p>
           </div>
         </div>
       </div>
@@ -189,8 +224,8 @@ function setTemplateData() {
     
       <div class="template-end-symbols">
         <img src="pictures/preview.svg" tabindex="0" alt="eye icon"/>
-        <img src="pictures/manage course.svg" tabindex="0" alt="manage courses icon"/>
-        <img src="pictures/grade submissions.svg" tabindex="0" alt="grade submission icon"/>
+        <img style="${btn2}"src="pictures/manage course.svg" tabindex="${btn2_tab}" alt="manage courses icon"/>
+        <img style="${btn3}"src="pictures/grade submissions.svg" tabindex="${btn3_tab}" alt="grade submission icon"/>
         <img src="pictures/reports.svg" tabindex="0" alt="report icon"/>
       </div>
     </div>`;
