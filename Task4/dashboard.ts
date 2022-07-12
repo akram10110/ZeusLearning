@@ -4,7 +4,7 @@ const data = [
     topic: "Acceleration",
     subject: "Physics",
     grade: "Grade 7",
-    "grade-update": "+2",
+    grade_update: "+2",
     units: 4,
     lessons: 18,
     topics: 24,
@@ -18,7 +18,7 @@ const data = [
     topic: "Acceleration",
     subject: "Physics",
     grade: "Grade 7",
-    "grade-update": "+2",
+    grade_update: "+2",
     units: 4,
     lessons: 18,
     topics: 24,
@@ -32,7 +32,7 @@ const data = [
     topic: "Acceleration",
     subject: "Physics",
     grade: "Grade 7",
-    "grade-update": "+2",
+    grade_update: "+2",
     units: 4,
     lessons: 18,
     topics: 24,
@@ -46,7 +46,7 @@ const data = [
     topic: "Acceleration",
     subject: "Physics",
     grade: "Grade 7",
-    "grade-update": "+2",
+    grade_update: "+2",
     units: 4,
     lessons: 18,
     topics: 24,
@@ -77,7 +77,7 @@ function setData() {
     
           <div class="flex-row font-12 row2">
             <p>Physics</p>
-            <hr id="hr1" />
+            <hr id="small_separator" />
             <p>Grade 7&nbsp;</p>
             <p style="color: green">+2</p>
           </div>
@@ -98,27 +98,19 @@ function setData() {
     
           <div class="flex-row font-12 dates">
             <p>50 Students</p>
-            <hr id="hr1" />
+            <hr id="small_separator" />
             <p>21-Jan-2020</p>
             <p>&nbsp;-&nbsp;</p>
             <p>21-Aug-2020</p>
           </div>
         </div>
       </div>
+      
       <hr
-        style="
-          height: 1px;
-          border-width: 0;
-        //   color: rgb(0, 0, 0);
-          background-color: rgb(233, 233, 233);
-          margin-top: 16px;
-        //   opacity: 0.12;
-        margin-left:24px;
-          z-index=-1;
-        "
+      class="big-separator"
       />
     
-      <div class="end-symbols">
+      <div class="template-end-symbols">
         <img src="pictures/preview.svg" tabindex="0" alt="eye icon"/>
         <img src="pictures/manage course.svg" tabindex="0" alt="manage courses icon"/>
         <img src="pictures/grade submissions.svg" tabindex="0" alt="grade submission icon"/>
@@ -135,7 +127,7 @@ function setData() {
 
 setData();
 
-// *************************************************************ham-hover
+// *****************************************ham-hover****************************************
 const menu_icon = document.getElementById('ham-menu-icon');
 
 const menu_dropdown = document.getElementById('ham-menu-div');
@@ -160,7 +152,7 @@ menu_dropdown.addEventListener('mouseout', function handleMouseOut() {
 }
 
 
-// *************************************************************notifications-hover
+// ***********************************notifications-hover******************
 const el = document.getElementById('notifications-icon');
 
 const hiddenDiv = document.getElementById('notifications-div');
@@ -184,7 +176,7 @@ hiddenDiv.addEventListener('mouseout', function handleMouseOut() {
 }
 
 
-// *************************************************announcement-hover
+// *************************************announcement-hover***********************
 const el2 = document.getElementById('announcement-icon');
 
 const hiddenDiv2 = document.getElementById('announcment-div');

@@ -4,7 +4,7 @@ var data = [
         topic: "Acceleration",
         subject: "Physics",
         grade: "Grade 7",
-        "grade-update": "+2",
+        grade_update: "+2",
         units: 4,
         lessons: 18,
         topics: 24,
@@ -18,7 +18,7 @@ var data = [
         topic: "Acceleration",
         subject: "Physics",
         grade: "Grade 7",
-        "grade-update": "+2",
+        grade_update: "+2",
         units: 4,
         lessons: 18,
         topics: 24,
@@ -32,7 +32,7 @@ var data = [
         topic: "Acceleration",
         subject: "Physics",
         grade: "Grade 7",
-        "grade-update": "+2",
+        grade_update: "+2",
         units: 4,
         lessons: 18,
         topics: 24,
@@ -46,7 +46,7 @@ var data = [
         topic: "Acceleration",
         subject: "Physics",
         grade: "Grade 7",
-        "grade-update": "+2",
+        grade_update: "+2",
         units: 4,
         lessons: 18,
         topics: 24,
@@ -59,7 +59,7 @@ var data = [
 var item = document.getElementsByClassName("grid-container");
 function setData() {
     for (var i = (data.length - 1); i >= 0; i--) {
-        var template = "<div class=\"template1\">\n    <div class=\"flex-row\">\n    <div class=\"flex-row template-margin\">\n          <img class=\"img\" src=".concat(data[i].img, " alt=\"course image\"/>\n        </div>\n        <div style=\"width: 100%; margin-left: 50px; margin-top: 20px\">\n          <div class=\"flex-row\">\n            <p class=\"font-16 p-size\">Acceleration</p>\n            <img class=\"favourite\" src=\"pictures/favourite.svg\"  alt=\"favourite icon\" tabindex=\"0\"/>\n          </div>\n    \n          <div class=\"flex-row font-12 row2\">\n            <p>Physics</p>\n            <hr id=\"hr1\" />\n            <p>Grade 7&nbsp;</p>\n            <p style=\"color: green\">+2</p>\n          </div>\n    \n          <div class=\"flex-row font-12 units\">\n            <p><span>4</span>&nbsp;Units&nbsp;&nbsp;</p>\n            <p><span>18</span>&nbsp;Lessons&nbsp;&nbsp;</p>\n            <p><span>24</span>&nbsp;Topics&nbsp;&nbsp;</p>\n          </div>\n    \n          <div class=\"select-div\">\n            <select class=\"font-16\" title=\"select a class\">\n              <option value=\"class\">Mr. Frank's class B</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n            </select>\n          </div>\n    \n          <div class=\"flex-row font-12 dates\">\n            <p>50 Students</p>\n            <hr id=\"hr1\" />\n            <p>21-Jan-2020</p>\n            <p>&nbsp;-&nbsp;</p>\n            <p>21-Aug-2020</p>\n          </div>\n        </div>\n      </div>\n      <hr\n        style=\"\n          height: 1px;\n          border-width: 0;\n        //   color: rgb(0, 0, 0);\n          background-color: rgb(233, 233, 233);\n          margin-top: 16px;\n        //   opacity: 0.12;\n        margin-left:24px;\n          z-index=-1;\n        \"\n      />\n    \n      <div class=\"end-symbols\">\n        <img src=\"pictures/preview.svg\" tabindex=\"0\" alt=\"eye icon\"/>\n        <img src=\"pictures/manage course.svg\" tabindex=\"0\" alt=\"manage courses icon\"/>\n        <img src=\"pictures/grade submissions.svg\" tabindex=\"0\" alt=\"grade submission icon\"/>\n        <img src=\"pictures/reports.svg\" tabindex=\"0\" alt=\"report icon\"/>\n      </div>\n    </div>");
+        var template = "<div class=\"template1\">\n    <div class=\"flex-row\">\n    <div class=\"flex-row template-margin\">\n          <img class=\"img\" src=".concat(data[i].img, " alt=\"course image\"/>\n        </div>\n        <div style=\"width: 100%; margin-left: 50px; margin-top: 20px\">\n          <div class=\"flex-row\">\n            <p class=\"font-16 p-size\">Acceleration</p>\n            <img class=\"favourite\" src=\"pictures/favourite.svg\"  alt=\"favourite icon\" tabindex=\"0\"/>\n          </div>\n    \n          <div class=\"flex-row font-12 row2\">\n            <p>Physics</p>\n            <hr id=\"small_separator\" />\n            <p>Grade 7&nbsp;</p>\n            <p style=\"color: green\">+2</p>\n          </div>\n    \n          <div class=\"flex-row font-12 units\">\n            <p><span>4</span>&nbsp;Units&nbsp;&nbsp;</p>\n            <p><span>18</span>&nbsp;Lessons&nbsp;&nbsp;</p>\n            <p><span>24</span>&nbsp;Topics&nbsp;&nbsp;</p>\n          </div>\n    \n          <div class=\"select-div\">\n            <select class=\"font-16\" title=\"select a class\">\n              <option value=\"class\">Mr. Frank's class B</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n            </select>\n          </div>\n    \n          <div class=\"flex-row font-12 dates\">\n            <p>50 Students</p>\n            <hr id=\"small_separator\" />\n            <p>21-Jan-2020</p>\n            <p>&nbsp;-&nbsp;</p>\n            <p>21-Aug-2020</p>\n          </div>\n        </div>\n      </div>\n      <hr\n        style=\"\n          height: 1px;\n          border-width: 0;\n        //   color: rgb(0, 0, 0);\n          background-color: rgb(233, 233, 233);\n          margin-top: 16px;\n        //   opacity: 0.12;\n        margin-left:24px;\n          z-index=-1;\n        \"\n      />\n    \n      <div class=\"template-end-symbols\">\n        <img src=\"pictures/preview.svg\" tabindex=\"0\" alt=\"eye icon\"/>\n        <img src=\"pictures/manage course.svg\" tabindex=\"0\" alt=\"manage courses icon\"/>\n        <img src=\"pictures/grade submissions.svg\" tabindex=\"0\" alt=\"grade submission icon\"/>\n        <img src=\"pictures/reports.svg\" tabindex=\"0\" alt=\"report icon\"/>\n      </div>\n    </div>");
         var a = document.getElementById('grid-container');
         if (a !== null) {
             a.insertAdjacentHTML('afterbegin', template);
