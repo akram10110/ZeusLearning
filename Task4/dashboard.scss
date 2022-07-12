@@ -696,6 +696,11 @@ span {
      }
 }
 
+#notifications-icon:focus-within  #notifications-div 
+{
+  display: block;
+}
+
 .notifications-btns {
      margin-top: auto;
      padding: 0px;
@@ -779,8 +784,8 @@ span {
 
      :hover {
           background-color: #cdc6c6;
-          .dropdown-icon {
-               transform: rotate(90deg);
+          img {
+               transform: rotate(180deg);
           }
 
           .sub-options {
@@ -805,6 +810,12 @@ span {
                font-size: 24px;
                color: #1f7a54;
                font-weight: bold;
+          }
+
+          img{
+            height: 12px;
+            width: 12px;
+            margin-right: 16px;
           }
      }
 

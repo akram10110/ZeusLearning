@@ -824,6 +824,10 @@ span {
   background: #555;
 }
 
+#notifications-icon:focus-within #notifications-div {
+  display: block;
+}
+
 .notifications-btns {
   margin-top: auto;
   padding: 0px;
@@ -931,9 +935,9 @@ span {
   background-color: #cdc6c6;
 }
 
-.ham-menu :hover .dropdown-icon {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+.ham-menu :hover img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .ham-menu :hover .sub-options {
@@ -969,6 +973,12 @@ span {
   font-size: 24px;
   color: #1f7a54;
   font-weight: bold;
+}
+
+.ham-menu .option-div img {
+  height: 12px;
+  width: 12px;
+  margin-right: 16px;
 }
 
 .ham-menu .sub-options {
