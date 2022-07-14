@@ -1,3 +1,5 @@
+// import  './data.json'; 
+// console.log(data1) 
 var template_data = [
     {
         img: "pictures/imageMask-1.svg",
@@ -13,7 +15,8 @@ var template_data = [
         start_date: "21-Jan-2020",
         end_date: "21-Aug-2020",
         btn2: true,
-        btn3: true
+        btn3: true,
+        tag: ""
     },
     {
         img: "pictures/imageMask-1.png",
@@ -29,7 +32,8 @@ var template_data = [
         start_date: "",
         end_date: "",
         btn2: false,
-        btn3: false
+        btn3: false,
+        tag: ""
     },
     {
         img: "pictures/imageMask-3.png",
@@ -45,7 +49,8 @@ var template_data = [
         start_date: "",
         end_date: "",
         btn2: false,
-        btn3: false
+        btn3: false,
+        tag: ""
     },
     {
         img: "pictures/imageMask-2.png",
@@ -61,7 +66,8 @@ var template_data = [
         start_date: "14-Oct-2019",
         end_date: "20-Oct-2020",
         btn2: true,
-        btn3: true
+        btn3: true,
+        tag: "EXPIRED"
     },
 ];
 var notification_data = [
@@ -149,10 +155,14 @@ function setTemplateData() {
         var style_date = "";
         var style_students = "";
         var style_lessons = "";
+        var style_tag = "";
         var btn2 = "";
         var btn3 = "";
         var btn2_tab = 0;
         var btn3_tab = 0;
+        if (template_data[i].tag === "") {
+            style_tag = "display: none;";
+        }
         if (template_data[i].start_date === "") {
             style_date = "display: none;";
         }
@@ -170,7 +180,7 @@ function setTemplateData() {
             btn3 = "opacity: 0.4;";
             btn3_tab = -1;
         }
-        var template = "<div class=\"template1\">\n    <div class=\"flex-row\">\n    <div class=\"flex-row template-margin\">\n          <img class=\"img\" src=".concat(template_data[i].img, " alt=\"course image\"/>\n        </div>\n        <div style=\"width: 100%; margin-left: 50px; margin-top: 20px\">\n          <div class=\"flex-row\">\n            <p class=\"font-16 p-size\">").concat(template_data[i].topic, "</p>\n            <img class=\"favourite\" src=\"pictures/favourite.svg\"  alt=\"favourite icon\" tabindex=\"0\"/>\n          </div>\n    \n          <div class=\"flex-row font-12 row2\">\n            <p>").concat(template_data[i].subject, "</p>\n            <hr id=\"small_separator\" />\n            <p>").concat(template_data[i].grade, "&nbsp;</p>\n            <p style=\"color: green\">").concat(template_data[i].grade_update, "</p>\n          </div>\n    \n          <div style=\"").concat(style_lessons, "\" class=\"flex-row font-12 units\">\n            <p><span>").concat(template_data[i].units, "</span>&nbsp;Units&nbsp;&nbsp;</p>\n            <p><span>").concat(template_data[i].lessons, "</span>&nbsp;Lessons&nbsp;&nbsp;</p>\n            <p><span>").concat(template_data[i].topics, "</span>&nbsp;Topics&nbsp;&nbsp;</p>\n          </div>\n    \n          <div class=\"select-div\">\n            <select class=\"font-16\" title=\"select a class\">\n              <option value=\"class\">").concat(template_data[i]["class"], "</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n            </select>\n          </div>\n    \n          <div class=\"flex-row font-12 dates\">\n            <p style=\"").concat(style_students, "\">").concat(template_data[i].students, " Students</p>\n            <hr style=\"").concat(style_date, "\" id=\"small_separator\" />\n            <p style=\"").concat(style_date, "\">").concat(template_data[i].start_date, "</p>\n            <p style=\"").concat(style_date, "\">&nbsp;-&nbsp;</p>\n            <p style=\"").concat(style_date, "\">").concat(template_data[i].end_date, "</p>\n          </div>\n        </div>\n      </div>\n\n      <hr\n      class=\"big-separator\"\n      />\n    \n      <div class=\"template-end-symbols\">\n        <img src=\"pictures/preview.svg\" tabindex=\"0\" alt=\"eye icon\"/>\n        <img style=\"").concat(btn2, "\"src=\"pictures/manage course.svg\" tabindex=\"").concat(btn2_tab, "\" alt=\"manage courses icon\"/>\n        <img style=\"").concat(btn3, "\"src=\"pictures/grade submissions.svg\" tabindex=\"").concat(btn3_tab, "\" alt=\"grade submission icon\"/>\n        <img src=\"pictures/reports.svg\" tabindex=\"0\" alt=\"report icon\"/>\n      </div>\n    </div>");
+        var template = "<div class=\"template1\">\n    <div class=\"flex-row\">\n    <p style=\"".concat(style_tag, "\" class=\"tag\">").concat(template_data[i].tag, "</p>\n    <div class=\"flex-row template-margin\">\n          <img class=\"img\" src=").concat(template_data[i].img, " alt=\"course image\"/>\n        </div>\n        <div style=\"width: 100%; margin-left: 50px; margin-top: 20px\">\n          <div class=\"flex-row\">\n            <p class=\"font-16 p-size\">").concat(template_data[i].topic, "</p>\n            <img class=\"favourite\" src=\"pictures/favourite.svg\"  alt=\"favourite icon\" tabindex=\"0\"/>\n          </div>\n    \n          <div class=\"flex-row font-12 row2\">\n            <p>").concat(template_data[i].subject, "</p>\n            <hr id=\"small_separator\" />\n            <p>").concat(template_data[i].grade, "&nbsp;</p>\n            <p style=\"color: green\">").concat(template_data[i].grade_update, "</p>\n          </div>\n    \n          <div style=\"").concat(style_lessons, "\" class=\"flex-row font-12 units\">\n            <p><span>").concat(template_data[i].units, "</span>&nbsp;Units&nbsp;&nbsp;</p>\n            <p><span>").concat(template_data[i].lessons, "</span>&nbsp;Lessons&nbsp;&nbsp;</p>\n            <p><span>").concat(template_data[i].topics, "</span>&nbsp;Topics&nbsp;&nbsp;</p>\n          </div>\n    \n          <div class=\"select-div\">\n            <select class=\"font-16\" title=\"select a class\">\n              <option value=\"class\">").concat(template_data[i]["class"], "</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n              <option value=\"class\">Mr. Frank's class B</option>\n            </select>\n          </div>\n    \n          <div class=\"flex-row font-12 dates\">\n            <p style=\"").concat(style_students, "\">").concat(template_data[i].students, " Students</p>\n            <hr style=\"").concat(style_date, "\" id=\"small_separator\" />\n            <p style=\"").concat(style_date, "\">").concat(template_data[i].start_date, "</p>\n            <p style=\"").concat(style_date, "\">&nbsp;-&nbsp;</p>\n            <p style=\"").concat(style_date, "\">").concat(template_data[i].end_date, "</p>\n          </div>\n        </div>\n      </div>\n\n      <hr\n      class=\"big-separator\"\n      />\n    \n      <div class=\"template-end-symbols\">\n        <img src=\"pictures/preview.svg\" tabindex=\"0\" alt=\"eye icon\"/>\n        <img style=\"").concat(btn2, "\"src=\"pictures/manage course.svg\" tabindex=\"").concat(btn2_tab, "\" alt=\"manage courses icon\"/>\n        <img style=\"").concat(btn3, "\"src=\"pictures/grade submissions.svg\" tabindex=\"").concat(btn3_tab, "\" alt=\"grade submission icon\"/>\n        <img src=\"pictures/reports.svg\" tabindex=\"0\" alt=\"report icon\"/>\n      </div>\n    </div>");
         var a = document.getElementById("grid-container");
         if (a !== null) {
             a.insertAdjacentHTML("afterbegin", template);

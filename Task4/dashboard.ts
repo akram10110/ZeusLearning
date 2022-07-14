@@ -1,3 +1,5 @@
+// import  './data.json'; 
+// console.log(data1) 
 const template_data = [
      {
           img: "pictures/imageMask-1.svg",
@@ -14,6 +16,7 @@ const template_data = [
           end_date: "21-Aug-2020",
           btn2:true,
           btn3:true,
+          tag:""
      },
      {
           img: "pictures/imageMask-1.png",
@@ -30,6 +33,7 @@ const template_data = [
           end_date: "",
           btn2:false,
           btn3:false,
+          tag:""
      },
      {
           img: "pictures/imageMask-3.png",
@@ -46,6 +50,7 @@ const template_data = [
           end_date: "",
           btn2:false,
           btn3:false,
+          tag:""
      },
      {
           img: "pictures/imageMask-2.png",
@@ -62,6 +67,7 @@ const template_data = [
           end_date: "20-Oct-2020",
           btn2:true,
           btn3:true,
+          tag:"EXPIRED"
      },
 ];
 
@@ -153,10 +159,14 @@ function setTemplateData() {
       let style_date = "";
       let style_students = ""
       let style_lessons = ""
+      let style_tag = ""
       let btn2 = ""
       let btn3 = ""
       let btn2_tab = 0
       let btn3_tab = 0
+      if(template_data[i].tag === ""){
+        style_tag="display: none;"
+      }
       if(template_data[i].start_date === ""){
         style_date="display: none;"
       }
@@ -178,6 +188,7 @@ function setTemplateData() {
     
     const template = `<div class="template1">
     <div class="flex-row">
+    <p style="${style_tag}" class="tag">${template_data[i].tag}</p>
     <div class="flex-row template-margin">
           <img class="img" src=${template_data[i].img} alt="course image"/>
         </div>
@@ -316,7 +327,6 @@ setAnnouncementData();
 
 // *****************************************ham-hover****************************************
 const menu_icon = document.getElementById("ham-menu-icon");
-
 const menu_dropdown = document.getElementById("ham-menu-div");
 
 if (menu_icon !== null && menu_dropdown !== null) {
@@ -339,7 +349,6 @@ if (menu_icon !== null && menu_dropdown !== null) {
 
 // ***********************************notifications-hover******************
 const el = document.getElementById("notifications-icon");
-
 const hiddenDiv = document.getElementById("notifications-div");
 if (hiddenDiv !== null && el !== null) {
      el.addEventListener("mouseover", function handleMouseOver() {
@@ -383,7 +392,6 @@ if (hiddenDiv !== null && el !== null) {
 
 // *************************************announcement-hover***********************
 const el2 = document.getElementById("announcement-icon");
-
 const hiddenDiv2 = document.getElementById("announcment-div");
 
 if (el2 !== null && hiddenDiv2 !== null) {

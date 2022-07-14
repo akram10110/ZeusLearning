@@ -1,0 +1,237 @@
+body{
+    background: #EEEEEE 0% 0% no-repeat padding-box;
+    opacity: 1;
+    font-family: 'Quicksand';
+    padding: 0px;
+    margin: 0px; 
+}
+
+/* **************************Header classes******************* */
+.header-main{
+    background-color: #000000;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border-bottom: 2px solid #31B9E4;
+
+    .header-bg-img{
+        width: 100%;
+        height: 56px;
+        position: absolute;
+        opacity: 0.4;
+        background: transparent;
+    }
+
+    .header-logo-img{
+       margin-left: 24px;
+       height: 36px;
+       width: 134px;
+       margin-right: 15px;
+       margin-bottom: 12px;
+       position: absolute;
+    }
+
+ }
+
+ /************************Form*************************************/
+.main-form{
+    /* Layout Properties */
+    margin-top: 143px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 488px;
+    height: 419px;
+    /* UI Properties */
+    background-color: white;
+    opacity: 1;
+    border-top: 4px solid #3AC7EC;
+    padding: 0px 32px;
+    border-radius: 2px 2px 0px 0px;
+
+}
+
+.heading-div{
+    display: flex;
+    flex-direction: row;
+
+    p{
+        font-size: 24px;
+        margin: 0px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 24px;
+    }
+}
+
+.email-div{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+
+    input{
+        border-top: 0cm;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 1px solid #747474;
+        font-size: 16px;
+        color: #666666;
+        font-family: 'Quicksand';
+    }
+
+    a{
+        color:#1F7A54;
+        font-size: 14px;
+        margin-top: 5px;
+        margin-left: auto;
+        text-decoration: none;
+        font-weight: medium;
+    }
+}
+
+.password-div{
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .password-input-div{
+        display: flex;
+        flex-direction: row;
+        align-content: end;
+
+        input{
+            border-top: 0cm;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid #747474;
+            font-size: 16px;
+            width: 100%;
+            font-family: 'Quicksand';
+        }
+        
+        img{
+            border-bottom: 1px solid #747474;
+            background-size: cover;
+            height: auto;
+            width: 22px;
+        }
+    }
+
+    a{
+        color:green;
+        font-size: 14px;
+        margin-left: auto;
+        text-decoration: none;
+        width: auto;
+        margin-top: 5px;
+    }
+}
+
+.remember-div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 26px;
+   
+    
+
+    p{
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 5px;
+        margin-top: 4px;
+        margin-bottom: 0px;
+    }
+
+    input{
+        accent-color: #1F7A54;
+        height: 24px;
+        width: 18px;
+    }
+}
+
+.btn-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 34px;
+
+    button{
+        height: 40px;
+        width: 216px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #3FD28B;
+        font-size: 14px;
+        font-family: 'Quicksand';
+        color: black;
+        border: 0px;
+        box-shadow: 0px 3px 5px #0000003D;
+        font-weight: bold;
+    
+    }
+}
+
+.forgot-div{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        font-size: 12px;
+        padding: 0px;
+        margin: 0px;
+        width: fit-content;
+    }
+
+    a{
+        font-size: 14px;
+        color: #1F7A54;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+ /************************Footer*************************************/
+
+.footer-main{
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 85px;
+    width:100%;
+}
+
+.flex2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+
+.footer-link{
+    height: 34px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: green;
+    margin-bottom: 10px;
+
+    a{
+        text-decoration: none;
+        color: #007900;
+    
+     }
+ }
+
+ .border2{
+    border-right: 1px solid #0000001F;  
+    margin: 8px 16px; 
+    height: 20px; 
+ }
+
+
+ 
