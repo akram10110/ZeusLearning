@@ -1,0 +1,66 @@
+////////////////////////             Answer             ////////////////////////////////////////////
+
+class WindowsButton {
+}
+
+class MacButton {
+}
+
+class WindowsFrame {
+}
+
+class MacFrame {
+}
+
+interface IButton{
+    WindowsButton CreateWindowsButton();
+    MacButton CreateMacButton();
+}
+
+interface IFrame{
+    WindowsFrame CreateWindowsFrame();
+    MacFrame CreateMacFrame(); 
+}
+
+class IUICreator implements IButton, IFrame{
+    //windows elements
+    WindowsButton CreateWindowsButton(){};
+    WindowsFrame CreateWindowsFrame(){};
+    AddButton(WindowsButton btn){}         
+    //mac elements
+    MacButton CreateMacButton(){};
+    MacFrame CreateMacFrame(){};
+    AddButton(MacButton btn){};              //method overloading
+}
+
+class  WindowsUICreator{
+   
+    IUICreator ui = new IUICreator();
+    WindowsFrame f = ui.CreateWindowsFrame();
+    WindowsButton b1 = ui.CreateWindowsButton();
+    WindowsButton b2 = ui.CreateWindowsButton();
+
+    ui.AddButton(b1);
+    ui.AddButton(b2);
+}
+
+class MacUICreator{
+    IUICreator ui = new IUICreator();
+    MacFrame f = ui.CreateMacFrame();
+    MacButton b1 = ui.CreateMacButton();
+    MacButton b2 = ui.CreateMacButton();
+
+    f.AddButton(b1);
+    f.AddButton(b2);
+   
+}
+
+class MyApp {
+   
+    void Initialize() {
+        WindowsUICreator windows = new WindowsUICreator();
+        MacUICreator mac = new MacUICreator();
+    }
+
+}
+

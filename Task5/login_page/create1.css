@@ -166,7 +166,7 @@ body {
 
 .form-main-div .form-nav-div hr {
   height: 1px;
-  width: 400px;
+  width: 25%;
   border-width: 0px;
   background-color: #e3dada;
 }
@@ -284,6 +284,30 @@ body {
   color: #222222;
   font-size: 16px;
   font-weight: 600;
+}
+
+.form-main-div .form-inputs-div .phone-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form-main-div .form-inputs-div .phone-input .p {
+  font-size: 16px;
+}
+
+.form-main-div .form-inputs-div .phone-input .country-code-input {
+  margin-left: 6px;
+  width: 14px;
+  margin-right: 8px;
+}
+
+.form-main-div .form-inputs-div .phone-input .phone-number-input {
+  width: 90px;
 }
 
 .form-main-div .form-inputs-div .image-upload-div {

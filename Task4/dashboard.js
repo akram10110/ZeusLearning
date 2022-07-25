@@ -1,4 +1,4 @@
-// import  './data.json'; 
+// import data from './data.json'
 // console.log(data1) 
 var template_data = [
     {

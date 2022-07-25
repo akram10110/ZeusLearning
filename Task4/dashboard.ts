@@ -1,4 +1,4 @@
-// import  './data.json'; 
+// import data from './data.json'
 // console.log(data1) 
 const template_data = [
      {
@@ -319,7 +319,7 @@ function setAnnouncementData(){
       a.insertAdjacentHTML("afterbegin", notification)
     }
   }
-}
+} 
 
 setTemplateData();
 setNotificationData();
